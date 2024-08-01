@@ -10,8 +10,6 @@ import 'core/utils/helpers/route.dart';
 import 'core/utils/helpers/theme.dart';
 import 'kiwi.dart';
 
-// this code auth
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   HttpOverrides.global = MyHttpOverrides();
