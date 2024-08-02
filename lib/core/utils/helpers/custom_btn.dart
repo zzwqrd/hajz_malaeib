@@ -105,7 +105,7 @@ class CustomElevatedButton extends BaseButton {
                       StylesApp.instance.colorButton),
                   shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(11.0),
                     ),
                   ),
                 ),

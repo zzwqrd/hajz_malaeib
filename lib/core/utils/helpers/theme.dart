@@ -48,7 +48,7 @@ class StylesApp {
 
   final double hight = 20;
 
-  final TextStyle appStayle = TextStyle(
+  final TextStyle appStayle = const TextStyle(
     fontSize: 14,
     color: Colors.white,
   );
@@ -57,46 +57,9 @@ class StylesApp {
     fontSize: 14,
     color: "#691f23".toColor,
   );
-  // TextTheme get arabicTheme => TextTheme(
-  //       headlineLarge: TextStyle(fontFamily: FontFamily.montserratSemiBold, fontSize: 36, color: primaryColorDark),
-  //       titleLarge: TextStyle(fontSize: 12.0, fontFamily: FontFamily.montserratSemiBold, color: primaryColorDark),
-  //       headlineSmall: TextStyle(fontSize: 14.0, fontFamily: FontFamily.montserratSemiBold, color: primaryColorDark),
-  //       headlineMedium: TextStyle(fontSize: 16.0, fontFamily: FontFamily.montserratSemiBold, color: primaryColorDark),
-  //       displayMedium: TextStyle(fontFamily: FontFamily.montserratSemiBold, fontSize: 20.0, color: primaryColorDark),
-  //       displayLarge: TextStyle(fontFamily: FontFamily.montserratBold, fontSize: 16.0, color: primaryColorDark),
-  //       titleSmall: TextStyle(fontFamily: FontFamily.montserratMedium, fontSize: 16.0, color: primaryColorDark),
-  //       titleMedium: TextStyle(fontFamily: FontFamily.montserratMedium, fontSize: 18.0, color: primaryColorDark),
-  //       bodyLarge: TextStyle(fontFamily: FontFamily.montserratRegular, fontSize: 18.0, color: primaryColorDark),
-  //       bodyMedium: TextStyle(fontFamily: FontFamily.montserratRegular, fontSize: 14.0, color: primaryColorDark),
-  //       bodySmall: TextStyle(fontSize: 14.0, fontFamily: FontFamily.montserratLight, color: primaryColorDark),
-  //     );
-  // TextTheme get englishThemeDark => TextTheme(
-  //       headlineLarge: TextStyle(fontFamily: FontFamily.interSemiBold, fontSize: 36, color: primaryColorLight),
-  //       titleLarge: TextStyle(fontSize: 12.0, fontFamily: FontFamily.interSemiBold, color: primaryColorLight),
-  //       headlineSmall: TextStyle(fontSize: 14.0, fontFamily: FontFamily.interSemiBold, color: primaryColorLight),
-  //       headlineMedium: TextStyle(fontSize: 16.0, fontFamily: FontFamily.interSemiBold, color: primaryColorLight),
-  //       displayMedium: TextStyle(fontFamily: FontFamily.interSemiBold, fontSize: 20.0, color: primaryColorLight),
-  //       displayLarge: TextStyle(fontFamily: FontFamily.interBold, fontSize: 16.0, color: primaryColorLight),
-  //       titleSmall: TextStyle(fontFamily: FontFamily.interMedium, fontSize: 16.0, color: primaryColorLight),
-  //       titleMedium: TextStyle(fontFamily: FontFamily.interMedium, fontSize: 18.0, color: primaryColorLight),
-  //       bodyLarge: TextStyle(fontFamily: FontFamily.interRegular, fontSize: 18.0, color: primaryColorLight),
-  //       bodyMedium: TextStyle(fontFamily: FontFamily.interRegular, fontSize: 14.0, color: primaryColorLight),
-  //       bodySmall: TextStyle(fontSize: 14.0, fontFamily: FontFamily.interLight, color: primaryColorLight),
-  //     );
-  // TextTheme get arabicThemeDark => TextTheme(
-  //       headlineLarge: TextStyle(fontFamily: FontFamily.montserratSemiBold, fontSize: 36, color: primaryColorLight),
-  //       titleLarge: TextStyle(fontSize: 12.0, fontFamily: FontFamily.montserratSemiBold, color: primaryColorLight),
-  //       headlineSmall: TextStyle(fontSize: 14.0, fontFamily: FontFamily.montserratSemiBold, color: primaryColorLight),
-  //       headlineMedium: TextStyle(fontSize: 16.0, fontFamily: FontFamily.montserratSemiBold, color: primaryColorLight),
-  //       displayMedium: TextStyle(fontFamily: FontFamily.montserratSemiBold, fontSize: 20.0, color: primaryColorLight),
-  //       displayLarge: TextStyle(fontFamily: FontFamily.montserratBold, fontSize: 16.0, color: primaryColorLight),
-  //       titleSmall: TextStyle(fontFamily: FontFamily.montserratMedium, fontSize: 16.0, color: primaryColorLight),
-  //       titleMedium: TextStyle(fontFamily: FontFamily.montserratMedium, fontSize: 18.0, color: primaryColorLight),
-  //       bodyLarge: TextStyle(fontFamily: FontFamily.montserratRegular, fontSize: 18.0, color: primaryColorLight),
-  //       bodyMedium: TextStyle(fontFamily: FontFamily.montserratRegular, fontSize: 14.0, color: primaryColorLight),
-  //       bodySmall: TextStyle(fontSize: 14.0, fontFamily: FontFamily.montserratLight, color: primaryColorLight),
-  //     );
-
+  SizedBox height = const SizedBox(
+    height: 18,
+  );
   ThemeData getLightTheme(Locale locale) {
     return ThemeData(
       platform: TargetPlatform.iOS,

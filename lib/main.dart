@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           title: 'ERP',
-          theme: StylesApp.instance.getLightTheme(context.locale),
+          theme: StylesApp.instance.getDarkTheme(context.locale),
           initialRoute: AppRoutes.init.initial,
           routes: AppRoutes.init.appRoutes,
           navigatorKey: navigator,

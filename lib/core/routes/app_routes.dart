@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hajz_malaeib/features/auth/welcome/views/view.dart';
 
 import '../../features/splash_view/presentation/view/view.dart';
 import 'routes.dart';
@@ -10,6 +11,7 @@ class AppRoutes {
   AppRoutes._internal();
   Map<String, Widget Function(BuildContext context)> appRoutes = {
     NamedRoutes.i.splash: (context) => const SplashView(),
+    NamedRoutes.i.welcomeView: (context) => const WelcomeView(),
     // NamedRoutes.i.user: (context) => UserView(),
 
     // NamedRoutes.i.tasks: (context) => TasksView(title: context.arg["title"]),
