@@ -84,6 +84,7 @@ class WelcomeView extends StatelessWidget {
                 ),
                 StylesApp.instance.height,
                 CustomElevatedButton(
+                  hasBorder: true,
                   onPressed: () {},
                   text: tr(LocaleKeys.guest),
                 ),

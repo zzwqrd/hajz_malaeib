@@ -61,6 +61,8 @@ class CustomElevatedButton extends BaseButton {
     double? height,
     double? width,
     required String text,
+    this.hasBorder = false,
+    this.backgroundColor,
   }) : super(
           text: text,
           onPressed: onPressed,
@@ -74,10 +76,10 @@ class CustomElevatedButton extends BaseButton {
         );
 
   final BoxDecoration? decoration;
-
   final Widget? leftIcon;
-
   final Widget? rightIcon;
+  final bool hasBorder;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -99,13 +101,18 @@ class CustomElevatedButton extends BaseButton {
           child: ElevatedButton(
             style: buttonStyle ??
                 ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all<Color>(
-                      StylesApp.instance.colorButton),
+                  backgroundColor: hasBorder
+                      ? WidgetStateProperty.all<Color>(Colors.transparent)
+                      : WidgetStateProperty.all<Color>(
+                          backgroundColor ?? StylesApp.instance.colorButton),
                   foregroundColor: WidgetStateProperty.all<Color>(
                       StylesApp.instance.colorButton),
                   shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(11.0),
+                      side: hasBorder
+                          ? const BorderSide(color: Colors.white, width: 1.0)
+                          : BorderSide.none,
                     ),
                   ),
                 ),

@@ -1,7 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:hajz_malaeib/core/utils/helpers/route.dart';
+import 'package:hajz_malaeib/core/utils/helpers/theme.dart';
 
-import '../../../generated/locale_keys.g.dart'; // تأكد من المسار الصحيح لملف الترجمة
+import '../../../generated/locale_keys.g.dart';
 
 void showDialogShared({
   required BuildContext context,
@@ -10,11 +12,11 @@ void showDialogShared({
   required VoidCallback onConfirm,
 }) {
   showDialog(
-    context: context,
+    context: navigator.currentContext!,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Center(child: Text(title)),
-        content: Text(content),
+        title: Center(child: Text(title).tr()),
+        content: Text(content, textAlign: TextAlign.center).tr(),
         alignment: Alignment.center,
         actionsAlignment: MainAxisAlignment.center,
         actionsOverflowAlignment: OverflowBarAlignment.center,
@@ -22,12 +24,12 @@ void showDialogShared({
           TextButton(
             style: TextButton.styleFrom(
               foregroundColor: Colors.white,
-              backgroundColor: const Color(0xFFFF4140),
+              backgroundColor: StylesApp.instance.colorButton,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
-            child: Text(tr(LocaleKeys.cancel)),
+            child: Text(LocaleKeys.cancel).tr(),
             onPressed: () {
               Navigator.of(context).pop();
             },
@@ -35,13 +37,13 @@ void showDialogShared({
           TextButton(
             style: TextButton.styleFrom(
               foregroundColor: Colors.white,
-              backgroundColor: const Color(0xFFFF4140),
+              backgroundColor: StylesApp.instance.colorButton,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
             onPressed: onConfirm,
-            child: Text(tr(LocaleKeys.ok)),
+            child: Text(LocaleKeys.ok).tr(),
           ),
         ],
       );
