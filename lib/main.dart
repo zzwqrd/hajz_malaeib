@@ -22,7 +22,7 @@ Future<void> main() async {
 
   runApp(
     EasyLocalization(
-      path: 'assets/langs/',
+      path: 'assets/langs',
       saveLocale: true,
       startLocale: const Locale('ar'),
       fallbackLocale: const Locale('en'),
