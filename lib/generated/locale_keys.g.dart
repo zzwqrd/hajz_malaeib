@@ -12,5 +12,8 @@ abstract class  LocaleKeys {
   static const confirm_language_change = 'confirm_language_change';
   static const cancel = 'cancel';
   static const ok = 'ok';
+  static const home = 'home';
+  static const stadium = 'stadium';
+  static const more = 'more';
 
 }

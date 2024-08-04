@@ -6,4 +6,5 @@ class NamedRoutes {
   NamedRoutes._internal();
   final splash = "/splash";
   final welcomeView = "/welcomeView";
+  final navigationView = "/NavigationView";
 }

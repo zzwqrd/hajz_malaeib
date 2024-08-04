@@ -1,12 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hajz_malaeib/generated/locale_keys.g.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kiwi/kiwi.dart';
 
+import '../../../../core/routes/routes.dart';
 import '../../../../core/utils/helpers/custom_btn.dart';
+import '../../../../core/utils/helpers/route.dart';
 import '../../../../core/utils/helpers/theme.dart';
 import '../../../../generated/assets.dart';
+import '../../../../generated/locale_keys.g.dart';
 import 'view_model/controller.dart';
 
 class WelcomeView extends StatelessWidget {
@@ -20,7 +23,6 @@ class WelcomeView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Logo
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40.0),
             child: Column(
@@ -30,7 +32,7 @@ class WelcomeView extends StatelessWidget {
                     Column(
                       children: [
                         Image.asset(
-                          Assets.iconsLgo, // Add your logo image to assets
+                          Assets.iconsPngwing, // Add your logo image to assets
                           height: 100,
                         ),
                       ],
@@ -39,8 +41,8 @@ class WelcomeView extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 Image.asset(
-                  Assets.iconsLgo, // Add your stadium image to assets
-                  height: 150,
+                  Assets.iconsS, // Add your stadium image to assets
+                  height: 200.w,
                 ),
               ],
             ),
@@ -85,7 +87,11 @@ class WelcomeView extends StatelessWidget {
                 StylesApp.instance.height,
                 CustomElevatedButton(
                   hasBorder: true,
-                  onPressed: () {},
+                  onPressed: () {
+                    pushAndRemoveUntil(
+                      NamedRoutes.i.navigationView,
+                    );
+                  },
                   text: tr(LocaleKeys.guest),
                 ),
               ],

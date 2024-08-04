@@ -13,23 +13,39 @@ import 'kiwi.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   HttpOverrides.global = MyHttpOverrides();
-  await SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  // await SystemChrome.setPreferredOrientations(
+  //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
   initKiwi();
 
   await EasyLocalization.ensureInitialized();
-
-  runApp(
-    EasyLocalization(
-      path: 'assets/langs',
-      saveLocale: true,
-      startLocale: const Locale('ar'),
-      fallbackLocale: const Locale('en'),
-      supportedLocales: const [Locale('ar'), Locale('en')],
-      child: const MyApp(),
-    ),
-  );
+  Future.wait([
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]),
+  ]).then((value) {
+    runApp(
+      EasyLocalization(
+        path: 'assets/langs',
+        saveLocale: true,
+        startLocale: const Locale('ar'),
+        fallbackLocale: const Locale('en'),
+        supportedLocales: const [Locale('ar'), Locale('en')],
+        child: const MyApp(),
+      ),
+    );
+  });
+  // runApp(
+  //   EasyLocalization(
+  //     path: 'assets/langs',
+  //     saveLocale: true,
+  //     startLocale: const Locale('ar'),
+  //     fallbackLocale: const Locale('en'),
+  //     supportedLocales: const [Locale('ar'), Locale('en')],
+  //     child: const MyApp(),
+  //   ),
+  // );
 }
 
 class MyApp extends StatelessWidget {

@@ -9,5 +9,8 @@
     "confirm": "Confirm",
     "confirm_language_change": "Are you sure you want to change the language?",
     "cancel": "Cancel",
-    "ok": "OK"
+    "ok": "OK",
+    "home" : "Home",
+    "stadium" : "stadium",
+    "more" : "More"
 }
