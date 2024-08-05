@@ -69,7 +69,7 @@ class _NavigationViewState extends State<NavigationView> {
         bloc: _bloc,
         builder: (context, state) {
           return SizedBox(
-            height: 100.h,
+            height: 77.h,
             child: Container(
               decoration: BoxDecoration(
                 border: Border(
@@ -80,21 +80,25 @@ class _NavigationViewState extends State<NavigationView> {
                 ),
               ),
               child: BottomNavigationBar(
-                iconSize: 33,
+                // iconSize: 11,
                 type: BottomNavigationBarType.fixed,
                 currentIndex: state.currentIndex,
                 onTap: (index) {
                   _bloc.add(UpdateNavigationIndex(newIndex: index));
                 },
-                elevation: 0.5,
-                selectedFontSize: 12,
+                selectedFontSize: 11,
                 showSelectedLabels: true,
                 showUnselectedLabels: true,
                 selectedItemColor: const Color(0xFF0790C3),
                 unselectedItemColor: Colors.white,
+                unselectedLabelStyle: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 11,
+                  color: Color(0xFF0790C3),
+                ),
                 selectedLabelStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 12,
+                  fontSize: 11,
                   color: Color(0xFF0790C3),
                 ),
                 items: <BottomNavigationBarItem>[

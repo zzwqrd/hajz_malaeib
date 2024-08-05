@@ -23,10 +23,10 @@ class Assets {
   static const String iconsImage = 'assets/icons/image.png';
   static const String iconsLgo = 'assets/icons/lgo.png';
   static const String iconsLoading = 'assets/icons/loading.json';
+  static const String iconsLogo = 'assets/icons/logo.png';
   static const String iconsMore = 'assets/icons/more.png';
   static const String iconsMoreActive = 'assets/icons/more_active.png';
   static const String iconsPngwing = 'assets/icons/pngwing.png';
-  static const String iconsLogo = 'assets/icons/logo.png';
   static const String iconsS = 'assets/icons/s.png';
   static const String iconsSplash = 'assets/icons/splash.png';
   static const String langsAr = 'assets/langs/ar.json';
