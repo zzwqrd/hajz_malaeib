@@ -14,21 +14,23 @@ BottomNavigationBarItem buildBottomNavigationBarItem({
         // color: isActive ? Colors.blue : Colors.transparent,
         borderRadius: BorderRadius.circular(0),
       ),
-      padding: const EdgeInsets.symmetric(vertical: 6.8),
+      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5.5),
       child: Image(
         image: AssetImage(icon),
-        width: 20.w,
+        width: 25.w,
+        fit: BoxFit.cover,
       ),
     ),
     activeIcon: Container(
       decoration: BoxDecoration(
-        // color: Colors.blue,
+        // color: isActive ? Colors.blue : Colors.transparent,
         borderRadius: BorderRadius.circular(0),
       ),
-      padding: const EdgeInsets.symmetric(vertical: 6.8),
+      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5.5),
       child: Image(
         image: AssetImage(iconActive),
-        width: 20.w,
+        width: 25.w,
+        fit: BoxFit.cover,
       ),
     ),
   );

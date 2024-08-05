@@ -84,7 +84,7 @@ class StylesApp {
       ),
       iconTheme: IconThemeData(size: 20.h),
       textTheme: englishTheme,
-      scaffoldBackgroundColor: StylesApp.instance.backgroundColor,
+      scaffoldBackgroundColor: StylesApp.instance.primaryColorDark,
       appBarTheme: AppBarTheme(
         toolbarHeight: 50,
         iconTheme: IconThemeData(size: 20.h),

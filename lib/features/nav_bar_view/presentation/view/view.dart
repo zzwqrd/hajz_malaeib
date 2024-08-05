@@ -81,24 +81,25 @@ class _NavigationViewState extends State<NavigationView> {
               ),
               child: BottomNavigationBar(
                 // iconSize: 11,
+                backgroundColor: Colors.black,
                 type: BottomNavigationBarType.fixed,
                 currentIndex: state.currentIndex,
                 onTap: (index) {
                   _bloc.add(UpdateNavigationIndex(newIndex: index));
                 },
-                selectedFontSize: 11,
+                selectedFontSize: 10,
                 showSelectedLabels: true,
                 showUnselectedLabels: true,
                 selectedItemColor: const Color(0xFF0790C3),
                 unselectedItemColor: Colors.white,
                 unselectedLabelStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 11,
+                  fontSize: 10,
                   color: Color(0xFF0790C3),
                 ),
                 selectedLabelStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 11,
+                  fontSize: 10,
                   color: Color(0xFF0790C3),
                 ),
                 items: <BottomNavigationBarItem>[
