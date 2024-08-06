@@ -46,14 +46,19 @@ class StylesApp {
             TextStyle(fontWeight: FontWeight.w300, color: textColor), // Light
       );
 
-  final double hight = 20;
+  final SizedBox paddingHeight = const SizedBox(
+    height: 18,
+  );
+  final SizedBox paddingWidth = const SizedBox(
+    height: 18,
+  );
 
-  final TextStyle appStayle = const TextStyle(
+  final TextStyle appStyle = const TextStyle(
     fontSize: 14,
     color: Colors.white,
   );
 
-  final TextStyle appStayleTow = TextStyle(
+  final TextStyle appStyleTow = TextStyle(
     fontSize: 14,
     color: "#691f23".toColor,
   );
@@ -141,6 +146,11 @@ class StylesApp {
 
   ThemeData getDarkTheme(Locale locale) {
     return ThemeData(
+      scaffoldBackgroundColor: primaryColorDark,
+
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: primaryColorDark,
+      ),
       platform: TargetPlatform.iOS,
       primaryColor: Colors.black,
       primaryColorLight: "#303030".toColor,
@@ -149,6 +159,22 @@ class StylesApp {
       brightness: Brightness.dark,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
+      // textTheme: const TextTheme(
+      //   displayLarge: TextStyle(
+      //       fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.blue),
+      //   displayMedium: TextStyle(
+      //       fontSize: 24.0,
+      //       fontWeight: FontWeight.w600,
+      //       color: Colors.blueAccent),
+      //   bodyLarge: TextStyle(
+      //       fontSize: 16.0, fontWeight: FontWeight.normal, color: Colors.black),
+      //   bodyMedium: TextStyle(
+      //       fontSize: 14.0,
+      //       fontWeight: FontWeight.normal,
+      //       color: Colors.black54),
+      //   bodySmall: TextStyle(
+      //       fontSize: 12.0, fontWeight: FontWeight.w300, color: Colors.grey),
+      // ),
       colorScheme: ColorScheme.dark(
         primary: Colors.black,
         surface: Colors.black,
@@ -167,6 +193,9 @@ class StylesApp {
       appBarTheme: AppBarTheme(
         iconTheme: IconThemeData(size: 20.h),
         color: Colors.black,
+        titleTextStyle: const TextStyle(
+          fontSize: 17,
+        ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         hintStyle: navigator.currentContext?.textTheme.bodyMedium

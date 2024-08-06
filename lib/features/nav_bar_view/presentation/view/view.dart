@@ -69,7 +69,7 @@ class _NavigationViewState extends State<NavigationView> {
         bloc: _bloc,
         builder: (context, state) {
           return SizedBox(
-            height: 77.h,
+            height: 74.h,
             child: Container(
               decoration: BoxDecoration(
                 border: Border(
@@ -81,7 +81,7 @@ class _NavigationViewState extends State<NavigationView> {
               ),
               child: BottomNavigationBar(
                 // iconSize: 11,
-                backgroundColor: Colors.black,
+
                 type: BottomNavigationBarType.fixed,
                 currentIndex: state.currentIndex,
                 onTap: (index) {

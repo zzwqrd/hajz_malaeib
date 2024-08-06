@@ -51,7 +51,7 @@ class WelcomeView extends StatelessWidget {
           // Arabic Text
           Text(
             tr(LocaleKeys.welcome),
-            style: StylesApp.instance.appStayle.copyWith(
+            style: StylesApp.instance.appStyle.copyWith(
               fontSize: 22,
               fontWeight: FontWeight.w900,
             ),
@@ -59,7 +59,7 @@ class WelcomeView extends StatelessWidget {
           StylesApp.instance.height,
           Text(
             tr(LocaleKeys.sub_welcome),
-            style: StylesApp.instance.appStayle,
+            style: StylesApp.instance.appStyle,
           ),
           const SizedBox(height: 40),
           // Buttons
@@ -111,7 +111,7 @@ class WelcomeView extends StatelessWidget {
                     },
                     child: Text(
                       tr(LocaleKeys.change_language),
-                      style: StylesApp.instance.appStayle,
+                      style: StylesApp.instance.appStyle,
                     ),
                   );
                 },

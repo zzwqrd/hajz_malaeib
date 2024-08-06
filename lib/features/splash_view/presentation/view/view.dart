@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kiwi/kiwi.dart';
 
-import '../../../../core/utils/helpers/theme.dart';
 import '../../../../generated/assets.dart';
 import '../view_models/controller.dart';
 
@@ -21,7 +20,6 @@ class _SplashViewState extends State<SplashView> {
       bloc: KiwiContainer().resolve<SplashController>()..initialState(),
       builder: (context, state) {
         return Scaffold(
-          backgroundColor: StylesApp.instance.primaryColorDark,
           body: Align(
             alignment: Alignment.bottomRight,
             child: Image.asset(
