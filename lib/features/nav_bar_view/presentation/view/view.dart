@@ -110,9 +110,9 @@ class _NavigationViewState extends State<NavigationView> {
                       iconActive: Assets.iconsHomeActive,
                       isActive: state.currentIndex == 0),
                   buildBottomNavigationBarItem(
-                      label: tr(LocaleKeys.stadium),
-                      icon: Assets.iconsFootballField,
-                      iconActive: Assets.iconsFootballFieldActive,
+                      label: tr(LocaleKeys.home),
+                      icon: Assets.iconsHome,
+                      iconActive: Assets.iconsHomeActive,
                       isActive: state.currentIndex == 1),
                   buildBottomNavigationBarItem(
                       label: tr(LocaleKeys.more),
