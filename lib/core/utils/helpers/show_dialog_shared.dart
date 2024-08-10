@@ -29,7 +29,7 @@ void showDialogShared({
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
-            child: Text(LocaleKeys.cancel).tr(),
+            child: const Text(LocaleKeys.cancel).tr(),
             onPressed: () {
               Navigator.of(context).pop();
             },
@@ -43,7 +43,7 @@ void showDialogShared({
               ),
             ),
             onPressed: onConfirm,
-            child: Text(LocaleKeys.ok).tr(),
+            child: const Text(LocaleKeys.ok).tr(),
           ),
         ],
       );

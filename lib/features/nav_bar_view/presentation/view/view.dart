@@ -6,6 +6,7 @@ import 'package:hajz_malaeib/generated/locale_keys.g.dart';
 import 'package:kiwi/kiwi.dart';
 
 import '../../../../generated/assets.dart';
+import '../../../home/presentation/view/view.dart';
 import '../view_model/bloc/bloc.dart';
 import '../view_model/bloc/event.dart';
 import '../view_model/bloc/state.dart';
@@ -50,7 +51,7 @@ class _NavigationViewState extends State<NavigationView> {
             padding: const EdgeInsets.all(11.0),
             child: Image.asset(
               Assets.iconsLogo,
-              width: 100.w,
+              width: 50.w,
             ),
           ),
         ],
@@ -59,7 +60,7 @@ class _NavigationViewState extends State<NavigationView> {
         bloc: _bloc,
         builder: (context, state) {
           return [
-            Center(child: Text(_bloc.state.currentIndex.toString())),
+            HomeView(),
             Center(child: Text(_bloc.state.currentIndex.toString())),
             Center(child: Text(_bloc.state.currentIndex.toString())),
           ][state.currentIndex];

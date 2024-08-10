@@ -153,7 +153,7 @@ class _TestScreenTimeState extends State<TestScreenTime> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Date Selection Bar'),
+        title: const Text('Date Selection Bar'),
         backgroundColor: Colors.black,
       ),
       body: Column(
@@ -168,7 +168,7 @@ class _TestScreenTimeState extends State<TestScreenTime> {
             scrollController: _dateScrollController,
           ),
           isLoading
-              ? Expanded(
+              ? const Expanded(
                   child: Center(
                     child: CircularProgressIndicator(),
                   ),
@@ -184,7 +184,7 @@ class _TestScreenTimeState extends State<TestScreenTime> {
                         child: ListTile(
                           title: Text(
                             'التاريخ: ${event['date']}',
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -196,21 +196,21 @@ class _TestScreenTimeState extends State<TestScreenTime> {
                                 children: [
                                   Text(
                                     'الوقت: ${eventDetails['time']}',
-                                    style: TextStyle(color: Colors.white),
+                                    style: const TextStyle(color: Colors.white),
                                   ),
                                   Text(
                                     'التفاصيل: ${eventDetails['details']}',
-                                    style: TextStyle(color: Colors.white),
+                                    style: const TextStyle(color: Colors.white),
                                   ),
                                   Text(
                                     'الموقع: ${eventDetails['location']}',
-                                    style: TextStyle(color: Colors.white),
+                                    style: const TextStyle(color: Colors.white),
                                   ),
                                   Text(
                                     'السعر: ${eventDetails['price']}',
-                                    style: TextStyle(color: Colors.white),
+                                    style: const TextStyle(color: Colors.white),
                                   ),
-                                  SizedBox(height: 10),
+                                  const SizedBox(height: 10),
                                 ],
                               );
                             }),
@@ -235,8 +235,9 @@ class DateSelectionBar extends StatefulWidget {
   final List<DateItem> dates;
   final ScrollController scrollController;
 
-  DateSelectionBar(
-      {this.onDateChanged,
+  const DateSelectionBar(
+      {super.key,
+      this.onDateChanged,
       this.onReset,
       required this.events,
       required this.initialDate,
@@ -271,7 +272,7 @@ class _DateSelectionBarState extends State<DateSelectionBar> {
       selectedIndex = index;
     });
 
-    Future.delayed(Duration(milliseconds: 300), () {
+    Future.delayed(const Duration(milliseconds: 300), () {
       String selectedDate = widget.dates[selectedIndex].fullDate;
       widget.onDateChanged?.call(selectedDate);
     });
@@ -283,7 +284,7 @@ class _DateSelectionBarState extends State<DateSelectionBar> {
         double position = selectedIndex * 60.0;
         widget.scrollController.animateTo(
           position,
-          duration: Duration(milliseconds: 300),
+          duration: const Duration(milliseconds: 300),
           curve: Curves.easeInOut,
         );
       }
@@ -293,7 +294,7 @@ class _DateSelectionBarState extends State<DateSelectionBar> {
   void _scrollLeft() {
     widget.scrollController.animateTo(
       widget.scrollController.offset - 100,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
     );
   }
@@ -301,7 +302,7 @@ class _DateSelectionBarState extends State<DateSelectionBar> {
   void _scrollRight() {
     widget.scrollController.animateTo(
       widget.scrollController.offset + 100,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
     );
   }
@@ -319,7 +320,7 @@ class _DateSelectionBarState extends State<DateSelectionBar> {
             children: [
               if (showScrollButtons)
                 IconButton(
-                  icon: Icon(Icons.arrow_back, color: Colors.white),
+                  icon: const Icon(Icons.arrow_back, color: Colors.white),
                   onPressed: () => _scrollLeft(),
                 ),
               Expanded(
@@ -344,7 +345,7 @@ class _DateSelectionBarState extends State<DateSelectionBar> {
               ),
               if (showScrollButtons)
                 IconButton(
-                  icon: Icon(Icons.arrow_forward, color: Colors.white),
+                  icon: const Icon(Icons.arrow_forward, color: Colors.white),
                   onPressed: () => _scrollRight(),
                 ),
             ],
@@ -367,7 +368,8 @@ class DateWidget extends StatelessWidget {
   final DateItem dateItem;
   final bool isSelected;
 
-  DateWidget({required this.dateItem, required this.isSelected});
+  const DateWidget(
+      {super.key, required this.dateItem, required this.isSelected});
 
   @override
   Widget build(BuildContext context) {
@@ -383,7 +385,7 @@ class DateWidget extends StatelessWidget {
               fontSize: 12,
             ),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Container(
             width: 24,
             height: 24,
@@ -402,12 +404,12 @@ class DateWidget extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           if (isSelected)
             Container(
               width: 5,
               height: 5,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.blue,
                 shape: BoxShape.circle,
               ),

@@ -1,3 +1,4 @@
+import 'package:hajz_malaeib/features/home/presentation/viewModel/controller.dart';
 import 'package:kiwi/kiwi.dart';
 
 import 'features/auth/welcome/views/view_model/controller.dart';
@@ -10,4 +11,5 @@ void initKiwi() {
   container.registerFactory((c) => SplashController());
   container.registerFactory((c) => LanguageCubit());
   container.registerFactory((c) => NavigationBloc());
+  container.registerFactory((c) => ControllerData());
 }

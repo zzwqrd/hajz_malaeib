@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String apiData = 'assets/api/data.json';
   static const String fontsCairoBlack = 'assets/fonts/Cairo-Black.ttf';
   static const String fontsCairoBold = 'assets/fonts/Cairo-Bold.ttf';
   static const String fontsCairoExtraBold = 'assets/fonts/Cairo-ExtraBold.ttf';

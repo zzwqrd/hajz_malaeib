@@ -7,4 +7,5 @@ class NamedRoutes {
   final splash = "/splash";
   final welcomeView = "/welcomeView";
   final navigationView = "/NavigationView";
+  final signIn = "/SignIn";
 }

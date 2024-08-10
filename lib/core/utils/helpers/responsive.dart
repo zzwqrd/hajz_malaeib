@@ -86,6 +86,8 @@ double getTextSize(double width) {
 
 // this is example
 class ResponsiveGridView extends StatelessWidget {
+  const ResponsiveGridView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(

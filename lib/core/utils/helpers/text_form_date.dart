@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart'; // لاستخدام التنسيق
+import 'package:intl/intl.dart';
 
 class DefaultDateTimeTextField extends StatefulWidget {
   final DateTime? initDate;
@@ -12,7 +12,7 @@ class DefaultDateTimeTextField extends StatefulWidget {
   final Function(DateTime date) onDateTimeChange;
 
   const DefaultDateTimeTextField({
-    Key? key,
+    super.key,
     this.icon,
     required this.onDateTimeChange,
     this.initDate,
@@ -27,7 +27,7 @@ class DefaultDateTimeTextField extends StatefulWidget {
     this.enabled = true,
     this.initialValue,
     this.headerTitle,
-  }) : super(key: key);
+  });
 
   @override
   _DefaultDateTimeTextFieldState createState() =>
@@ -140,7 +140,7 @@ class _DefaultDateTimeTextFieldState extends State<DefaultDateTimeTextField>
               Positioned(
                 right: 0,
                 child: IconButton(
-                  icon: Icon(Icons.clear),
+                  icon: const Icon(Icons.clear),
                   onPressed: resetDateTime,
                 ),
               ),
@@ -162,7 +162,8 @@ mixin DefaultDecoration {
     return InputDecoration(
       icon: icon != null ? Icon(icon) : null,
       labelText: label,
-      border: borderLess ?? false ? InputBorder.none : UnderlineInputBorder(),
+      border:
+          borderLess ?? false ? InputBorder.none : const UnderlineInputBorder(),
     );
   }
 }
@@ -174,10 +175,10 @@ class IsRequiredView extends StatelessWidget {
   final bool isRequired;
 
   const IsRequiredView({
-    Key? key,
+    super.key,
     required this.title,
     this.isRequired = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -185,13 +186,13 @@ class IsRequiredView extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
           ),
         ),
         if (isRequired)
-          Text(
+          const Text(
             ' *',
             style: TextStyle(
               fontSize: 16,

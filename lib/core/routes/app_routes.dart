@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hajz_malaeib/features/auth/sign_in/views/view.dart';
 import 'package:hajz_malaeib/features/auth/welcome/views/view.dart';
 
 import '../../features/nav_bar_view/presentation/view/view.dart';
@@ -14,6 +15,7 @@ class AppRoutes {
     NamedRoutes.i.splash: (context) => const SplashView(),
     NamedRoutes.i.welcomeView: (context) => const WelcomeView(),
     NamedRoutes.i.navigationView: (context) => const NavigationView(),
+    NamedRoutes.i.signIn: (context) => const SignInView(),
     // NamedRoutes.i.user: (context) => UserView(),
 
     // NamedRoutes.i.tasks: (context) => TasksView(title: context.arg["title"]),

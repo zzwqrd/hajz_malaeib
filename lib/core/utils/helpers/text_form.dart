@@ -1,7 +1,8 @@
 // ignore_for_file: unnecessary_null_comparison
 
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+
 import 'theme.dart';
 
 class TxtField extends StatelessWidget {
@@ -14,7 +15,7 @@ class TxtField extends StatelessWidget {
   final bool obscureText;
   final TextEditingController controller;
   const TxtField(
-      {Key? key,
+      {super.key,
       this.validator,
       this.onSaved,
       required this.hintText,
@@ -22,8 +23,7 @@ class TxtField extends StatelessWidget {
       required this.textInputType,
       required this.prefix,
       required this.obscureText,
-      required this.controller})
-      : super(key: key);
+      required this.controller});
 
   @override
   Widget build(BuildContext context) {
